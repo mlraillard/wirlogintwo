@@ -1,5 +1,156 @@
 {
     "authenticationlogin": {
-        "message": "Login Successful"
-    }
+        "message": "Login Successful",
+        "sessionHash": "01e6b52635395fe51dc8ef2101324236265f32c2405bd86718f0ba87419eb751",
+        "submittedOrganization": "ST",
+        "organizations": {
+          "ST": "State"
+        },
+        "user": {
+          "firstname": "State",
+          "role": "Organization Admin",
+          "created": "2021-02-05",
+          "superadmin": false,
+          "email": "admin@state.gov",
+          "username": "admin",
+          "lastname": "Admin"
+        }
+    },
+    "authorizationpermissions": [
+        {
+          "sequence": 0,
+          "read": true,
+          "display": "CDC Website",
+          "create": true,
+          "update": true,
+          "destroy": true,
+          "active": true,
+          "url": "https://cdc.gov",
+          "actionName": "cdc"
+        },
+        {
+          "sequence": 1,
+          "read": true,
+          "children": [
+            {
+              "sequence": 0,
+              "read": true,
+              "display": "Add Child Organization",
+              "create": true,
+              "update": true,
+              "destroy": true,
+              "active": true,
+              "url": "/organizations/add",
+              "actionName": "organizations-add"
+            },
+            {
+              "sequence": 1,
+              "read": true,
+              "display": "List Child Organizations",
+              "create": true,
+              "update": true,
+              "destroy": true,
+              "active": true,
+              "url": "/organizations/list",
+              "actionName": "organizations-list"
+            },
+            {
+              "sequence": 2,
+              "read": true,
+              "display": "Organization Audit Logs",
+              "create": true,
+              "update": true,
+              "destroy": true,
+              "active": true,
+              "url": "/organizations/audit",
+              "actionName": "organizations-audit"
+            }
+          ],
+          "display": "Organization Management",
+          "create": true,
+          "update": true,
+          "destroy": true,
+          "active": true,
+          "actionName": "organizations"
+        },
+        {
+          "sequence": 2,
+          "read": true,
+          "children": [
+            {
+              "sequence": 0,
+              "read": true,
+              "display": "Patient Search",
+              "create": true,
+              "update": true,
+              "destroy": true,
+              "active": true,
+              "url": "/mpi/patients/search",
+              "actionName": "patient-search"
+            },
+            {
+              "sequence": 1,
+              "read": true,
+              "display": "Patient Simple Search",
+              "create": true,
+              "update": true,
+              "destroy": true,
+              "active": true,
+              "url": "/mpi/patients/search-simple",
+              "actionName": "patient-simple-search"
+            }
+          ],
+          "display": "Patient Data",
+          "create": true,
+          "update": true,
+          "destroy": true,
+          "active": true,
+          "actionName": "patient"
+        },
+        {
+          "sequence": 3,
+          "read": true,
+          "children": [
+            {
+              "sequence": 0,
+              "read": true,
+              "display": "Add User",
+              "create": true,
+              "update": true,
+              "destroy": true,
+              "active": true,
+              "url": "/users/add",
+              "actionName": "users-add"
+            },
+            {
+              "sequence": 1,
+              "read": true,
+              "display": "List User For Organization",
+              "create": true,
+              "update": true,
+              "destroy": true,
+              "active": true,
+              "url": "/users/list",
+              "actionName": "users-list"
+            },
+            {
+              "sequence": 2,
+              "read": true,
+              "display": "User Audit Reports",
+              "create": true,
+              "update": true,
+              "destroy": true,
+              "active": true,
+              "url": "/users/audit",
+              "actionName": "users-audit"
+            }
+          ],
+          "display": "User Management",
+          "create": true,
+          "update": true,
+          "destroy": true,
+          "active": true,
+          "actionName": "users"
+        }
+      ]
 }
